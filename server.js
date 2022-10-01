@@ -1,12 +1,12 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const cors = require("cors");
+//const cors = require("cors");
 const app = express();
 const corsOptions = {
     origin: "http://localhost:3061"
 };
 const db = require("./app/models");
-app.use(cors(corsOptions));
+//app.use(cors(corsOptions));
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
 // parse requests of content-type - application/x-www-form-urlencoded
