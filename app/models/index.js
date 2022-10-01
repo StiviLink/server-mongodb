@@ -1,0 +1,17 @@
+const dbConfig = require("../config/db.config.js");
+const mongoose = require("mongoose");
+mongoose.Promise = global.Promise;
+const db = {};
+db.mongoose = mongoose;
+db.url = dbConfig.url;
+db.avatars = require("./avatar.model.js")(mongoose);
+db.avatars_community = require("./avatar_community.model.js")(mongoose);
+db.techniques = require("./technique.model.js")(mongoose);
+db.boutiques = require("./boutique.model.js")(mongoose);
+db.produits = require("./produit.model.js")(mongoose);
+db.possession = require("./possession.model.js")(mongoose);
+db.categoryProduits = require("./categoryProduit.model.js")(mongoose);
+db.village = require("./village.model.js")(mongoose);
+db.quartier = require("./quartier.model.js")(mongoose);
+db.lieu = require("./lieu.model.js")(mongoose);
+module.exports = db;
